@@ -6,6 +6,7 @@ B_ = Button
 T_ = Text
 V_ = Value
 """
+
 # Window creation
 root = ctk.CTk(fg_color="lightgreen")
 root.geometry("400x400")
@@ -49,9 +50,14 @@ T_flag = ctk.CTkLabel(root,text=str(V_flag),font=("Helvetica",18))
 T_time = ctk.CTkLabel(root,text=str(V_time),font=("Helvetica",20))
 T_question = ctk.CTkLabel(root,text=str(V_question),font=("Helvetica",20))
 
+
+
+
+
+
 #NOTE : GRID
 
-root.grid_columnconfigure(0, weight=1)  # Permet l'extension
+root.grid_columnconfigure(0, weight=1)
 root.grid_columnconfigure(1, weight=1)
 root.grid_columnconfigure(2, weight=1)
 root.grid_columnconfigure(3, weight=1)
@@ -70,5 +76,5 @@ T_title.grid(row=1,column=0,columnspan=4,pady=10,sticky="n")
 
 B_play.grid(row=2,column=0,columnspan=4,padx=10,pady=10,sticky="n")
 
-#Boucle fenêtre
+# Window loop
 root.mainloop()
