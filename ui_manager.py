@@ -4,7 +4,7 @@ UI Manager for Minesweeper.
 import customtkinter as ctk
 from PIL import Image, ImageTk
 import os
-from game.config import (
+from game.settings import (
     UI_COLORS, TEXT_COLORS, EMOJIS,
     GAME_READY, GAME_PLAYING, GAME_WON, GAME_LOST
 )
