@@ -44,24 +44,31 @@ B_difficulty = ctk.CTkOptionMenu(root, values=["Easy", "Medium", "Hard"], comman
 B_play = ctk.CTkButton(root,text="Play",font=("Helvetica",18),fg_color="red",text_color="white",hover_color="black",width=75,height=23,corner_radius=10)
 
 # Text
-T_title = ctk.CTkLabel(root,text="Minesweeper", font=("Helvetica",28))
+T_title = ctk.CTkLabel(root,text="Minesweeper", font=("Arial",28))
 T_flag = ctk.CTkLabel(root,text=str(V_flag),font=("Helvetica",18))
 T_time = ctk.CTkLabel(root,text=str(V_time),font=("Helvetica",20))
 T_question = ctk.CTkLabel(root,text=str(V_question),font=("Helvetica",20))
 
 #NOTE : GRID
+
+root.grid_columnconfigure(0, weight=1)  # Permet l'extension
+root.grid_columnconfigure(1, weight=1)
+root.grid_columnconfigure(2, weight=1)
+root.grid_columnconfigure(3, weight=1)
+
 B_difficulty.grid(row=0,column=0,padx=10,pady=10,sticky="nw")
-# flag_label.pack(pady=0)
-# T_flag.pack(pady=20)
+flag_label.grid(row=0,column=1,padx=0,pady=10,sticky="nw")
+T_flag.grid(row=0,column=1,padx=30,pady=10,sticky="nw")
 
-# question_label.pack(pady=20)
-# T_question.pack(pady=0)
+question_label.grid(row=0,column=2,padx=10,pady=10,sticky="nw")
+T_question.grid(row=0,column=2,padx=30,pady=10,sticky="nw")
+clock_label.grid(row=0,column=3,padx=25,pady=10,sticky="ne")
+T_time.grid(row=0,column=3,padx=10,pady=10,sticky="ne")
 
-# T_title.pack(pady=20)
+T_title.grid(row=1,column=0,columnspan=4,pady=10,sticky="n")
 
-# clock_label.pack(pady=0)
-# T_time.pack(pady=20)
-# B_play.pack(pady=20)
+
+B_play.grid(row=2,column=0,columnspan=4,padx=10,pady=10,sticky="n")
 
 #Boucle fenêtre
 root.mainloop()
